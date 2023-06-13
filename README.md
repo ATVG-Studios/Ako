@@ -1,6 +1,6 @@
 # Ako Flutter Widgets
 
-Ako is a Flutter Widgets collection.
+Ako is a collection of generic Flutter widgets
 
 # License
 
