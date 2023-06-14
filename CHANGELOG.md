@@ -9,14 +9,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 ### Changed
-- Create importable splits, `package:ako/extensions.dart`, `package:ako/utils.dart` and `package:ako/widgets.dart`
-- `package:ako/ako.dart` still exports all other splits for a single import.
 ### Deprecated
 ### Removed
 ### Fixed
 ### Security
 
 ---
+
+## [0.1.2] - 2023-06-14
+
+### Changed
+- Create importable splits, `package:ako/extensions.dart`, `package:ako/utils.dart` and `package:ako/widgets.dart`
+- `package:ako/ako.dart` still exports all other splits for a single import.
 
 ## [0.1.1] - 2023-06-13
 
