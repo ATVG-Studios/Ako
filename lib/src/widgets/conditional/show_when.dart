@@ -11,12 +11,12 @@ final class AkoShowWhen extends StatelessWidget {
   const AkoShowWhen({Key? key, required this.condition, required this.child}) : super(key: key);
 
   final bool condition;
-  final Widget child;
+  final Widget? child;
 
   @override
   Widget build(BuildContext context) {
     if(condition) {
-      return child;
+      return child ?? const SizedBox();
     }
     return const SizedBox();
   }

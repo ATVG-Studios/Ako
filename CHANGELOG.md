@@ -16,6 +16,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [0.2.0] - 2023-07-18
+
+### Added
+- AkoFuture, a widget to simplify usage of FutureBuilder
+- AkoFutureOptional, a widget to simplify usage of FutureBuilder with Optionals
+- The `Optional` library is added as a dependency, and exported via `package:ako/optional.dart`
+
+### Changed
+- `child` of AkoShowWhen is now optional, an empty sized box is shown if null
+
 ## [0.1.2] - 2023-06-14
 
 ### Changed

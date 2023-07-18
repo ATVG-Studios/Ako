@@ -12,3 +12,7 @@ export 'src/widgets/conditional/show_when.dart';
 
 // Widgets - Responsive
 export 'src/widgets/responsive/responsive_layout.dart';
+
+// Widgets - Future
+export 'src/widgets/future/future.dart';
+export 'src/widgets/future/future_optional.dart';
