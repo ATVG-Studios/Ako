@@ -6,8 +6,8 @@ class AkoFutureOptional<T> extends StatelessWidget {
   const AkoFutureOptional({super.key, required this.future, required this.withData, this.withNoData, this.withFutureEmpty, this.withError});
 
   final Future<Optional<T>> future;
-  final Widget? withNoData;
-  final Widget? withFutureEmpty;
+  final Builder? withNoData;
+  final Builder? withFutureEmpty;
   final AkoFutureBuilder<T> withData;
   final AkoErrorBuilder? withError;
 
@@ -17,8 +17,8 @@ class AkoFutureOptional<T> extends StatelessWidget {
         future: future,
         builder: (context, snapshot) {
           if(snapshot.error != null) return withError?.call(snapshot.error!, snapshot.stackTrace) ?? Container();
-          if(snapshot.data == null) return withNoData ?? Container();
-          if(snapshot.data?.isEmpty == true) return withFutureEmpty ?? Container();
+          if(snapshot.data == null) return withNoData?.build(context) ?? Container();
+          if(snapshot.data?.isEmpty == true) return withFutureEmpty?.build(context) ?? Container();
           return withData(snapshot.data!.value);
         }
     );

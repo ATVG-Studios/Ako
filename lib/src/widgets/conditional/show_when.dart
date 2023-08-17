@@ -6,17 +6,17 @@
 import 'package:flutter/material.dart';
 
 /// AkoShowWhen is a widget that either shows a child widget or an empty SizedBox.<br>
-/// When [condition] is true, the [child] widget is shown, otherwise a [SizedBox] is shown.
+/// When [condition] is true, the result of [builder] is shown, otherwise a [SizedBox] is shown.
 final class AkoShowWhen extends StatelessWidget {
-  const AkoShowWhen({Key? key, required this.condition, required this.child}) : super(key: key);
+  const AkoShowWhen({Key? key, required this.condition, required this.builder}) : super(key: key);
 
   final bool condition;
-  final Widget? child;
+  final Builder builder;
 
   @override
   Widget build(BuildContext context) {
     if(condition) {
-      return child ?? const SizedBox();
+      return builder.build(context);
     }
     return const SizedBox();
   }

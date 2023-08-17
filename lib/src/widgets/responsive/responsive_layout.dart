@@ -14,9 +14,9 @@ import '../../utils/responsive_device.dart';
 class AkoResponsiveLayout extends StatelessWidget {
   const AkoResponsiveLayout({Key? key, this.desktop, this.tablet, this.mobile}) : super(key: key);
 
-  final Widget? desktop;
-  final Widget? tablet;
-  final Widget? mobile;
+  final Builder? desktop;
+  final Builder? tablet;
+  final Builder? mobile;
 
   @override
   Widget build(BuildContext context) {
@@ -24,12 +24,12 @@ class AkoResponsiveLayout extends StatelessWidget {
         builder: (context, constraints) {
           final layout = AkoResponsiveDevice.getLayoutFromConstraints(constraints);
           if(layout.isDesktop()) {
-            return desktop ?? const Placeholder();
+            return desktop?.build(context) ?? const Placeholder();
           }
           if(layout.isTablet()) {
-            return tablet ?? const Placeholder();
+            return tablet?.build(context) ?? const Placeholder();
           }
-          return mobile ?? const Placeholder();
+          return mobile?.build(context) ?? const Placeholder();
         },
     );
   }

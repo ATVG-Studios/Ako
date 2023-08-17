@@ -6,19 +6,19 @@
 import 'package:flutter/material.dart';
 
 /// AkoShowEither is a widget that shows one of two widgets based on a condition.<br>
-/// When [condition] is true the [onTrue] widget is shown, when it is false the [onFalse] widget is shown.
+/// When [condition] is true the result of [onTrue] is shown, when it is false the result of [onFalse] is shown.
 final class AkoShowEither extends StatelessWidget {
   const AkoShowEither({Key? key, required this.condition, required this.onTrue, required this.onFalse}) : super(key: key);
 
   final bool condition;
-  final Widget onTrue;
-  final Widget onFalse;
+  final Builder onTrue;
+  final Builder onFalse;
 
   @override
   Widget build(BuildContext context) {
     if(condition) {
-      return onTrue;
+      return onTrue.build(context);
     }
-    return onFalse;
+    return onFalse.builder(context);
   }
 }

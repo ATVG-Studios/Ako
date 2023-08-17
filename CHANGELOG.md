@@ -16,6 +16,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [0.4.0] - 2023-08-17
+
+### Changed
+* **BREAKING** Replaced all widgets with builders
+
 ## [0.3.0] - 2023-07-31
 
 ### Added
