@@ -11,14 +11,14 @@ final class AkoShowEither extends StatelessWidget {
   const AkoShowEither({Key? key, required this.condition, required this.onTrue, required this.onFalse}) : super(key: key);
 
   final bool condition;
-  final Builder onTrue;
-  final Builder onFalse;
+  final WidgetBuilder onTrue;
+  final WidgetBuilder onFalse;
 
   @override
   Widget build(BuildContext context) {
     if(condition) {
-      return onTrue.build(context);
+      return onTrue(context);
     }
-    return onFalse.builder(context);
+    return onFalse(context);
   }
 }
