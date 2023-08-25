@@ -7,4 +7,5 @@
 // Anything "export"ed from here, is public.
 
 // Utils
+export 'src/utils/pair.dart';
 export 'src/utils/responsive_device.dart';
