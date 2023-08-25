@@ -7,5 +7,5 @@
 class AkoBadgeLabel {
   final String label;
 
-  AkoBadgeLabel(this.label);
+  AkoBadgeLabel({required this.label});
 }
