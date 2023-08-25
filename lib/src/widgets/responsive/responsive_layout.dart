@@ -12,7 +12,8 @@ import '../../utils/responsive_device.dart';
 /// then [AkoResponsiveDevice] is used to decide which widget is shown.<br>
 /// When one of the widgets is missing, a [Placeholder] is shown instead.
 class AkoResponsiveLayout extends StatelessWidget {
-  const AkoResponsiveLayout({Key? key, this.desktop, this.tablet, this.mobile}) : super(key: key);
+  const AkoResponsiveLayout({Key? key, this.desktop, this.tablet, this.mobile})
+      : super(key: key);
 
   final WidgetBuilder? desktop;
   final WidgetBuilder? tablet;
@@ -21,16 +22,17 @@ class AkoResponsiveLayout extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(
-        builder: (context, constraints) {
-          final layout = AkoResponsiveDevice.getLayoutFromConstraints(constraints);
-          if(layout.isDesktop()) {
-            return desktop?.call(context) ?? const Placeholder();
-          }
-          if(layout.isTablet()) {
-            return tablet?.call(context) ?? const Placeholder();
-          }
-          return mobile?.call(context) ?? const Placeholder();
-        },
+      builder: (context, constraints) {
+        final layout =
+            AkoResponsiveDevice.getLayoutFromConstraints(constraints);
+        if (layout.isDesktop()) {
+          return desktop?.call(context) ?? const Placeholder();
+        }
+        if (layout.isTablet()) {
+          return tablet?.call(context) ?? const Placeholder();
+        }
+        return mobile?.call(context) ?? const Placeholder();
+      },
     );
   }
 }

@@ -22,9 +22,11 @@ enum AkoResponsiveDevice {
   bool isMobile() {
     return AkoResponsiveDevice.isWidthMobile(minWidth);
   }
+
   bool isTablet() {
     return AkoResponsiveDevice.isWidthTablet(minWidth);
   }
+
   bool isDesktop() {
     return AkoResponsiveDevice.isWidthDesktop(minWidth);
   }
@@ -32,21 +34,23 @@ enum AkoResponsiveDevice {
   static bool isWidthMobile(double width) {
     return width >= AkoResponsiveDevice.mobile.minWidth;
   }
+
   static bool isWidthTablet(double width) {
     return width >= AkoResponsiveDevice.tablet.minWidth;
   }
+
   static bool isWidthDesktop(double width) {
     return width >= AkoResponsiveDevice.desktop.minWidth;
   }
 
   static getLayoutFromWidth(double width) {
-    if(AkoResponsiveDevice.isWidthDesktop(width)) {
+    if (AkoResponsiveDevice.isWidthDesktop(width)) {
       return AkoResponsiveDevice.desktop;
     }
-    if(AkoResponsiveDevice.isWidthTablet(width)) {
+    if (AkoResponsiveDevice.isWidthTablet(width)) {
       return AkoResponsiveDevice.tablet;
     }
-    if(AkoResponsiveDevice.isWidthMobile(width)) {
+    if (AkoResponsiveDevice.isWidthMobile(width)) {
       return AkoResponsiveDevice.mobile;
     }
   }
@@ -56,27 +60,31 @@ enum AkoResponsiveDevice {
   }
 
   static getLayoutFromContext(BuildContext context) {
-    return AkoResponsiveDevice.getLayoutFromWidth(MediaQuery.of(context).size.width);
+    return AkoResponsiveDevice.getLayoutFromWidth(
+        MediaQuery.of(context).size.width);
   }
 
-  static getForConstraint(BoxConstraints constraints, {mobile, tablet, desktop}) {
+  static getForConstraint(BoxConstraints constraints,
+      {mobile, tablet, desktop}) {
     final layout = AkoResponsiveDevice.getLayoutFromConstraints(constraints);
-    return AkoResponsiveDevice.getForLayout(layout, mobile: mobile, tablet: tablet, desktop: desktop);
+    return AkoResponsiveDevice.getForLayout(layout,
+        mobile: mobile, tablet: tablet, desktop: desktop);
   }
 
   static getForContext(BuildContext context, {mobile, tablet, desktop}) {
     final layout = AkoResponsiveDevice.getLayoutFromContext(context);
-    return AkoResponsiveDevice.getForLayout(layout, mobile: mobile, tablet: tablet, desktop: desktop);
+    return AkoResponsiveDevice.getForLayout(layout,
+        mobile: mobile, tablet: tablet, desktop: desktop);
   }
 
   static getForLayout(AkoResponsiveDevice layout, {mobile, tablet, desktop}) {
-    if(layout.isDesktop()) {
+    if (layout.isDesktop()) {
       return desktop;
     }
-    if(layout.isTablet()) {
+    if (layout.isTablet()) {
       return tablet;
     }
-    if(layout.isMobile()) {
+    if (layout.isMobile()) {
       return mobile;
     }
   }

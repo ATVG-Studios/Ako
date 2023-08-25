@@ -9,7 +9,8 @@ import 'package:flutter/material.dart';
 /// [hintText] is the text shown inside the box.<br>
 /// [clickAction] is a [GestureTapCallback] triggered on user tap.
 class AkoFakeSearchField extends StatelessWidget {
-  const AkoFakeSearchField({super.key, required this.hintText, required this.clickAction});
+  const AkoFakeSearchField(
+      {super.key, required this.hintText, required this.clickAction});
 
   final String hintText;
   final GestureTapCallback clickAction;
@@ -38,8 +39,7 @@ class AkoFakeSearchField extends StatelessWidget {
                 ),
               ),
             ),
-          )
-      ),
+          )),
     );
   }
 }

@@ -9,7 +9,14 @@ import 'package:flutter/material.dart';
 
 /// AkoBadge is a widget that takes a future and displays the returned list of [AkoBadgeLabel] as badges.
 class AkoBadge extends StatefulWidget {
-  const AkoBadge({Key? key, required this.labelsFuture, this.noDataLabel, this.style, this.withError, this.withNoData}) : super(key: key);
+  const AkoBadge(
+      {Key? key,
+      required this.labelsFuture,
+      this.noDataLabel,
+      this.style,
+      this.withError,
+      this.withNoData})
+      : super(key: key);
 
   final Future<List<AkoBadgeLabel>> labelsFuture;
   final String? noDataLabel;
@@ -27,19 +34,23 @@ class _AkoBadgeState extends State<AkoBadge> {
     return AkoFuture(
       future: widget.labelsFuture,
       withError: widget.withError,
-      withNoData: widget.withNoData ?? (context) {
-        return Text(widget.noDataLabel ?? "");
-      },
+      withNoData: widget.withNoData ??
+          (context) {
+            return Text(widget.noDataLabel ?? "");
+          },
       withData: (data) {
-        final badges = data.map((label) => Padding(
-          padding: widget.style?.paddingAround ?? const EdgeInsets.all(2.0),
-          child: Badge(
-            label: Text(label.label),
-            textStyle: widget.style?.textStyle,
-            largeSize: widget.style?.largeSize,
-            backgroundColor: widget.style?.backgroundColor,
-          ),
-        )).toList();
+        final badges = data
+            .map((label) => Padding(
+                  padding:
+                      widget.style?.paddingAround ?? const EdgeInsets.all(2.0),
+                  child: Badge(
+                    label: Text(label.label),
+                    textStyle: widget.style?.textStyle,
+                    largeSize: widget.style?.largeSize,
+                    backgroundColor: widget.style?.backgroundColor,
+                  ),
+                ))
+            .toList();
         return Wrap(
           children: badges,
         );
