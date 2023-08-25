@@ -8,6 +8,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## Unreleased
 
 ### Added
+* AkoBadge, a widget for displaying a list of badges
+* AkoBadgeLabel, a class used as input to AkoBadge
+* AkoBadgeStyle, a class for styling AkoBadge
 ### Changed
 ### Deprecated
 ### Removed

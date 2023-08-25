@@ -6,6 +6,11 @@
 // This file defines the public widgets API of Ako.
 // Anything "export"ed from here, is public.
 
+// Widgets - Badge
+export 'src/widgets/badge/badge.dart';
+export 'src/widgets/badge/badge_label.dart';
+export 'src/widgets/badge/badge_style.dart';
+
 // Widgets - Conditional
 export 'src/widgets/conditional/show_either.dart';
 export 'src/widgets/conditional/show_when.dart';
