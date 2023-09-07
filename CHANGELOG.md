@@ -12,6 +12,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * AkoBadgeLabel, a class used as input to AkoBadge
 * AkoBadgeStyle, a class for styling AkoBadge
 * AkoPair, a simple Pair class (2 element Tuple)
+* AkoSearchSelectionSheet, a TripAdvisor inspired multi-select search bottom-sheet
+* AkoSearchSelectionStyle, a class for styling AkoSearchSelectionSheet
+* AkoSearchSelectionOptions, a class for configuring AkoSearchSelectionSheet
+* AkoSearchSelection, a class to launch AkoSearchSelectionSheet with AkoSearchSelectionOptions
+* AkoSearchField, a simple input field
+* AkoSearchFieldStyle, a class for styling AkoSearchField
+* AkoSearchFieldOptions, a class for configuring AkoSearchField
 ### Changed
 ### Deprecated
 ### Removed
