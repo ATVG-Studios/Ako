@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 class AkoSearchSelection {
   AkoSearchSelectionOptions options;
 
-  AkoSearchSelection(this.options);
+  AkoSearchSelection({required this.options});
 
   void showBottomSheet(BuildContext context) {
     showModalBottomSheet(
@@ -152,9 +152,7 @@ class _AkoSearchSelectionSheetState extends State<AkoSearchSelectionSheet> {
                   ),
                   Expanded(
                       flex: 4,
-                      child: Center(
-                          child: widget.options.bottomSheetTitle)
-                  ),
+                      child: Center(child: widget.options.bottomSheetTitle)),
                   const Expanded(
                     flex: 1,
                     child: SizedBox(),
