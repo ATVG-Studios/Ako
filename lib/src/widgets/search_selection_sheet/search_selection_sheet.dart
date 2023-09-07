@@ -1,5 +1,4 @@
 import 'package:ako/ako.dart';
-import 'package:ako/src/widgets/search/search_field.dart';
 import 'package:flutter/material.dart';
 
 class AkoSearchSelection {
@@ -154,9 +153,9 @@ class _AkoSearchSelectionSheetState extends State<AkoSearchSelectionSheet> {
                   Expanded(
                       flex: 4,
                       child: Center(
-                          child:
-                              Text("Search", style: TextStyle(fontSize: 24)))),
-                  Expanded(
+                          child: widget.options.bottomSheetTitle)
+                  ),
+                  const Expanded(
                     flex: 1,
                     child: SizedBox(),
                   )
