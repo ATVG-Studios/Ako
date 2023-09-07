@@ -1,6 +1,12 @@
+// Copyright 2023 the Ako authors (https://pub.dev/packages/ako).
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
 import 'package:ako/ako.dart';
 import 'package:flutter/material.dart';
 
+/// AkoSearchSelection is a way to launch the [AkoSearchSelectionSheet] with [AkoSearchSelectionOptions]
 class AkoSearchSelection {
   AkoSearchSelectionOptions options;
 
@@ -25,6 +31,7 @@ class AkoSearchSelection {
   }
 }
 
+/// AkoSearchSelectionOptions is a wrapper for arguments to [AkoSearchSelectionSheet]
 class AkoSearchSelectionOptions {
   Map<int, String> options;
   List<int> selectedOptions;
@@ -64,6 +71,7 @@ class AkoSearchSelectionOptions {
       customFieldOptions ?? AkoSearchFieldOptions();
 }
 
+/// AkoSearchSelectionStyle is a wrapper for style to [AkoSearchSelectionSheet]
 class AkoSearchSelectionStyle {
   Color topDragIndicatorColor;
   Color listViewBackgroundColor;
@@ -80,6 +88,8 @@ class AkoSearchSelectionStyle {
   });
 }
 
+/// AkoSearchSelectionSheet is a bottom-sheet widget that implements a multi-select searchable list
+/// The design and layout is inspired by TripAdvisor
 class AkoSearchSelectionSheet extends StatefulWidget {
   const AkoSearchSelectionSheet({super.key, required this.options});
 

@@ -1,5 +1,11 @@
+// Copyright 2023 the Ako authors (https://pub.dev/packages/ako).
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
 import 'package:flutter/material.dart';
 
+/// AkoSearchFieldOptions is a wrapper for arguments to [AkoSearchField]
 class AkoSearchFieldOptions {
   AkoSearchFieldStyle? customStyle;
   Function(String)? onInputChanged;
@@ -14,6 +20,7 @@ class AkoSearchFieldOptions {
   AkoSearchFieldStyle get style => customStyle ?? AkoSearchFieldStyle();
 }
 
+/// AkoSearchFieldStyle is a wrapper for style of [AkoSearchField]
 class AkoSearchFieldStyle {
   EdgeInsets paddingAroundField;
   EdgeInsets contentPadding;
@@ -34,6 +41,7 @@ class AkoSearchFieldStyle {
   });
 }
 
+/// AkoSearchField implements a simple search field
 class AkoSearchField extends StatefulWidget {
   const AkoSearchField({super.key, required this.options});
 
