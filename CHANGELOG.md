@@ -8,6 +8,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## Unreleased
 
 ### Added
+### Changed
+### Deprecated
+### Removed
+### Fixed
+### Security
+
+---
+
+## [0.6.0] - 2023-09-08
+
+### Added
 * AkoBadge, a widget for displaying a list of badges
 * AkoBadgeLabel, a class used as input to AkoBadge
 * AkoBadgeStyle, a class for styling AkoBadge
@@ -19,13 +30,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * AkoSearchField, a simple input field
 * AkoSearchFieldStyle, a class for styling AkoSearchField
 * AkoSearchFieldOptions, a class for configuring AkoSearchField
-### Changed
-### Deprecated
-### Removed
-### Fixed
-### Security
-
----
 
 ## [0.5.0] - 2023-08-17
 
