@@ -69,7 +69,7 @@ class AkoSearchSelectionOptions {
 class AkoSearchSelectionStyle {
   Color topDragIndicatorColor;
   Color listViewBackgroundColor;
-  Color bottomSheetBackgroundColor;
+  Color? bottomSheetBackgroundColor;
   EdgeInsets listViewItemPadding;
   EdgeInsets bottomButtonPadding;
   BorderSide bottomButtonSeparator;
@@ -80,7 +80,7 @@ class AkoSearchSelectionStyle {
   AkoSearchSelectionStyle({
     this.topDragIndicatorColor = Colors.grey,
     this.listViewBackgroundColor = Colors.white,
-    this.bottomSheetBackgroundColor = Colors.white,
+    this.bottomSheetBackgroundColor,
     this.listViewItemPadding = const EdgeInsets.fromLTRB(13, 0, 13, 0),
     this.bottomButtonPadding = const EdgeInsets.all(8.0),
     this.bottomButtonSeparator = const BorderSide(color: Colors.grey, width: 1),
