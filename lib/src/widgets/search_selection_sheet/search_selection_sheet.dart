@@ -38,9 +38,7 @@ class AkoSearchSelectionOptions {
   List<int> selectedOptions;
   Widget bottomSheetTitle;
   Widget clearButtonText;
-  ButtonStyle? clearButtonStyle;
   Widget submitButtonText;
-  ButtonStyle? submitButtonStyle;
   AkoSearchSelectionStyle? customStyle;
   AkoSearchFieldOptions? customFieldOptions;
 
@@ -57,9 +55,7 @@ class AkoSearchSelectionOptions {
         "Clear filters",
         style: TextStyle(decoration: TextDecoration.underline),
       ),
-      this.clearButtonStyle,
       this.submitButtonText = const Text("Apply"),
-      this.submitButtonStyle,
       this.customStyle,
       this.customFieldOptions,
       this.onSelectionChanged});
@@ -78,6 +74,8 @@ class AkoSearchSelectionStyle {
   EdgeInsets bottomButtonPadding;
   BorderSide bottomButtonSeparator;
   RoundedRectangleBorder bottomSheetShape;
+  ButtonStyle? clearButtonStyle;
+  ButtonStyle? submitButtonStyle;
 
   AkoSearchSelectionStyle({
     this.topDragIndicatorColor = Colors.grey,
@@ -87,7 +85,10 @@ class AkoSearchSelectionStyle {
     this.bottomButtonPadding = const EdgeInsets.all(8.0),
     this.bottomButtonSeparator = const BorderSide(color: Colors.grey, width: 1),
     this.bottomSheetShape = const RoundedRectangleBorder(
-        borderRadius: BorderRadius.vertical(top: Radius.circular(15)))
+        borderRadius: BorderRadius.vertical(top: Radius.circular(15)),
+    ),
+    this.clearButtonStyle,
+    this.submitButtonStyle,
   });
 }
 
@@ -223,11 +224,11 @@ class _AkoSearchSelectionSheetState extends State<AkoSearchSelectionSheet> {
                   children: [
                     TextButton(
                         onPressed: _clearSelection,
-                        style: widget.options.clearButtonStyle,
+                        style: widget.options.style.clearButtonStyle,
                         child: widget.options.clearButtonText),
                     ElevatedButton(
                       onPressed: _applySelection,
-                      style: widget.options.submitButtonStyle,
+                      style: widget.options.style.submitButtonStyle,
                       child: widget.options.submitButtonText,
                     )
                   ],
