@@ -25,7 +25,7 @@ class AkoSearchFieldStyle {
   EdgeInsets paddingAroundField;
   EdgeInsets contentPadding;
   Color fieldCursorColor;
-  Color fieldFillColor;
+  Color? fieldFillColor;
   Color fieldClearIconColor;
   BorderRadius inputBorderRadius;
   BorderSide inputBorderStyle;
@@ -34,7 +34,7 @@ class AkoSearchFieldStyle {
     this.paddingAroundField = const EdgeInsets.all(12.0),
     this.contentPadding = const EdgeInsets.only(right: 15),
     this.fieldCursorColor = Colors.black,
-    this.fieldFillColor = Colors.white,
+    this.fieldFillColor,
     this.fieldClearIconColor = Colors.black,
     this.inputBorderRadius = const BorderRadius.all(Radius.circular(20)),
     this.inputBorderStyle = const BorderSide(width: 1, color: Colors.grey),
