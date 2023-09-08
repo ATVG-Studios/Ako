@@ -68,7 +68,6 @@ class AkoSearchSelectionOptions {
 /// AkoSearchSelectionStyle is a wrapper for style to [AkoSearchSelectionSheet]
 class AkoSearchSelectionStyle {
   Color topDragIndicatorColor;
-  Color listViewBackgroundColor;
   Color? bottomSheetBackgroundColor;
   EdgeInsets listViewItemPadding;
   EdgeInsets bottomButtonPadding;
@@ -79,7 +78,6 @@ class AkoSearchSelectionStyle {
 
   AkoSearchSelectionStyle({
     this.topDragIndicatorColor = Colors.grey,
-    this.listViewBackgroundColor = Colors.white,
     this.bottomSheetBackgroundColor,
     this.listViewItemPadding = const EdgeInsets.fromLTRB(13, 0, 13, 0),
     this.bottomButtonPadding = const EdgeInsets.all(8.0),
@@ -185,7 +183,7 @@ class _AkoSearchSelectionSheetState extends State<AkoSearchSelectionSheet> {
 
                     return InkWell(
                       child: Container(
-                        color: widget.options.style.listViewBackgroundColor,
+                        color: Colors.transparent,
                         child: Padding(
                           padding: widget.options.style.listViewItemPadding,
                           child: ListTile(
