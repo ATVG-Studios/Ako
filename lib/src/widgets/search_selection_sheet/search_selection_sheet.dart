@@ -17,7 +17,8 @@ class AkoSearchSelection {
       context: context,
       isScrollControlled: true,
       useSafeArea: true,
-      shape: options.bottomSheetShape,
+      shape: options.style.bottomSheetShape,
+      backgroundColor: options.style.bottomSheetBackgroundColor,
       builder: (context) {
         return StatefulBuilder(
           builder: (context, setState) {
@@ -42,7 +43,6 @@ class AkoSearchSelectionOptions {
   ButtonStyle? submitButtonStyle;
   AkoSearchSelectionStyle? customStyle;
   AkoSearchFieldOptions? customFieldOptions;
-  RoundedRectangleBorder bottomSheetShape;
 
   Function(List<int>)? onSelectionChanged;
 
@@ -62,9 +62,7 @@ class AkoSearchSelectionOptions {
       this.submitButtonStyle,
       this.customStyle,
       this.customFieldOptions,
-      this.onSelectionChanged,
-      this.bottomSheetShape = const RoundedRectangleBorder(
-          borderRadius: BorderRadius.vertical(top: Radius.circular(15)))});
+      this.onSelectionChanged});
 
   AkoSearchSelectionStyle get style => customStyle ?? AkoSearchSelectionStyle();
   AkoSearchFieldOptions get fieldOptions =>
@@ -75,16 +73,21 @@ class AkoSearchSelectionOptions {
 class AkoSearchSelectionStyle {
   Color topDragIndicatorColor;
   Color listViewBackgroundColor;
+  Color bottomSheetBackgroundColor;
   EdgeInsets listViewItemPadding;
   EdgeInsets bottomButtonPadding;
   BorderSide bottomButtonSeparator;
+  RoundedRectangleBorder bottomSheetShape;
 
   AkoSearchSelectionStyle({
     this.topDragIndicatorColor = Colors.grey,
     this.listViewBackgroundColor = Colors.white,
+    this.bottomSheetBackgroundColor = Colors.white,
     this.listViewItemPadding = const EdgeInsets.fromLTRB(13, 0, 13, 0),
     this.bottomButtonPadding = const EdgeInsets.all(8.0),
     this.bottomButtonSeparator = const BorderSide(color: Colors.grey, width: 1),
+    this.bottomSheetShape = const RoundedRectangleBorder(
+        borderRadius: BorderRadius.vertical(top: Radius.circular(15)))
   });
 }
 
