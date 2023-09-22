@@ -126,6 +126,17 @@ class _AkoSearchSelectionSheetState extends State<AkoSearchSelectionSheet> {
     Navigator.of(context).pop();
   }
 
+  void _applyFilterToSelectable(String filter) {
+    if(filter.isEmpty) {
+      selectableOptions = widget.options.options;
+    } else {
+      final filteredOptions = Map<int, String>.from(selectableOptions);
+      filteredOptions.removeWhere((key, value) => !value.toLowerCase().contains(filter.toLowerCase()));
+      selectableOptions = filteredOptions;
+    }
+    setState(() { });
+  }
+
   @override
   void initState() {
     selectableOptions = widget.options.options;
@@ -135,6 +146,7 @@ class _AkoSearchSelectionSheetState extends State<AkoSearchSelectionSheet> {
 
   @override
   Widget build(BuildContext context) {
+    widget.options.fieldOptions.onInputChanged = _applyFilterToSelectable;
     final selectableKeys = selectableOptions.keys.toList();
     final selectableValues = selectableOptions.values.toList();
     return DraggableScrollableSheet(
