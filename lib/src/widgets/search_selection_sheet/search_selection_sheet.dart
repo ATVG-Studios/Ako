@@ -127,14 +127,15 @@ class _AkoSearchSelectionSheetState extends State<AkoSearchSelectionSheet> {
   }
 
   void _applyFilterToSelectable(String filter) {
-    if(filter.isEmpty) {
+    if (filter.isEmpty) {
       selectableOptions = widget.options.options;
     } else {
       final filteredOptions = Map<int, String>.from(selectableOptions);
-      filteredOptions.removeWhere((key, value) => !value.toLowerCase().contains(filter.toLowerCase()));
+      filteredOptions.removeWhere(
+          (key, value) => !value.toLowerCase().contains(filter.toLowerCase()));
       selectableOptions = filteredOptions;
     }
-    setState(() { });
+    setState(() {});
   }
 
   @override
