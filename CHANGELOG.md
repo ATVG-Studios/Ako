@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 * AkoBadgeStyle has `paddingInside` for text padding with a default of `4`
 * AkoSearchSelection.showBottomSheet now returns the result of `showModalBottomSheet`
+* AkoSearchFilter, a TripAdvisor inspired filter bottom sheet
 
 ### Changed
 * Increase AkoBadge `largeSize` default to `26`
