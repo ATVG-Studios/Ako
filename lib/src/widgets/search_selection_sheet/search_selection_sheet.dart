@@ -12,8 +12,8 @@ class AkoSearchSelection {
 
   AkoSearchSelection({required this.options});
 
-  void showBottomSheet(BuildContext context) {
-    showModalBottomSheet(
+  Future<T?> showBottomSheet<T>(BuildContext context) {
+    return showModalBottomSheet<T>(
       context: context,
       isScrollControlled: true,
       useSafeArea: true,
