@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [unreleased]
 
+### Added
+* AkoBadgeStyle has `paddingInside` for text padding with a default of `4`
+
+### Changed
+* Increase AkoBadge `largeSize` default to `26`
+
 <!--
 ### Added
 ### Changed

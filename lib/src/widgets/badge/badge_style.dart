@@ -11,11 +11,13 @@ class AkoBadgeStyle {
   final Color backgroundColor;
   final double largeSize;
   final EdgeInsets paddingAround;
+  final EdgeInsets paddingInside;
 
   AkoBadgeStyle({
     this.textStyle = const TextStyle(fontSize: 12),
     this.backgroundColor = Colors.grey,
-    this.largeSize = 20,
+    this.largeSize = 26,
     this.paddingAround = const EdgeInsets.all(2.0),
+    this.paddingInside = const EdgeInsets.all(4.0),
   });
 }

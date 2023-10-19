@@ -44,7 +44,10 @@ class _AkoBadgeState extends State<AkoBadge> {
                   padding:
                       widget.style?.paddingAround ?? const EdgeInsets.all(2.0),
                   child: Badge(
-                    label: Text(label.label),
+                    label: Padding(
+                      padding: widget.style?.paddingInside ?? const EdgeInsets.all(4.0),
+                      child: Text(label.label)
+                    ),
                     textStyle: widget.style?.textStyle,
                     largeSize: widget.style?.largeSize,
                     backgroundColor: widget.style?.backgroundColor,
