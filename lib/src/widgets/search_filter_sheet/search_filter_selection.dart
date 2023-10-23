@@ -9,8 +9,8 @@ import 'search_filter_term.dart';
 
 class AkoSearchFilterSelection {
   String label;
-  HashMap<int, String> selectionOptions;
-  HashMap<int, AkoSearchFilterTerm> selectionTerms;
+  Map<int, String> selectionOptions;
+  Map<int, AkoSearchFilterTerm> selectionTerms;
   List<int> selectedOptions;
   List<AkoSearchFilterTerm> selectedTerms;
 

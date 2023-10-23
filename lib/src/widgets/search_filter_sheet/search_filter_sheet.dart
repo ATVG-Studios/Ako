@@ -3,6 +3,8 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
+import 'dart:collection';
+
 import 'package:ako/ako.dart';
 import 'package:flutter/material.dart';
 
@@ -116,10 +118,11 @@ class _AkoSearchFilterSheetState extends State<AkoSearchFilterSheet> {
         in widget.options.filterSelections) {
       if (selection.selectionTerms.isEmpty) {
         List<AkoSearchFilterTerm> terms = await selection.fetchTerms!();
-        for (AkoSearchFilterTerm term in terms) {
-          selection.selectionOptions[term.id] = term.name;
-          selection.selectionTerms[term.id] = term;
-        }
+        Map<int, AkoSearchFilterTerm> termsMap = terms.asMap();
+
+        selection.selectionTerms = termsMap;
+        selection.selectionOptions = termsMap
+            .map((key, value) => MapEntry<int, String>(key, value.name));
       }
 
       Widget child = _buildFilterWidget(selection);
