@@ -12,7 +12,7 @@ class AkoSearchFilterSelection {
   Map<int, String> selectionOptions;
   Map<int, AkoSearchFilterTerm> selectionTerms;
   List<int> selectedOptions;
-  List<AkoSearchFilterTerm> selectedTerms;
+  Map<int, AkoSearchFilterTerm> selectedTerms;
 
   AkoSearchFilterTermLoader? fetchTerms;
   Function(List<int>)? onSelectionChanged;

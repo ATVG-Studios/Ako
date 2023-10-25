@@ -46,7 +46,7 @@ class _AkoSearchFilterSheetState extends State<AkoSearchFilterSheet> {
     }
     for (final selection in widget.options.filterSelections) {
       if (selection.onTermsChanged != null) {
-        selection.onTermsChanged!(selection.selectedTerms);
+        selection.onTermsChanged!(selection.selectedTerms.values.toList());
       }
       if (selection.onSelectionChanged != null) {
         selection.onSelectionChanged!(selection.selectedOptions);
@@ -57,37 +57,41 @@ class _AkoSearchFilterSheetState extends State<AkoSearchFilterSheet> {
   Widget _buildFilterWidget(AkoSearchFilterSelection selection) {
     List<AkoBadgeLabel> selectedLabels = [];
 
-    for (final term in selection.selectedTerms) {
+    for (final term in selection.selectedTerms.values) {
       selectedLabels.add(AkoBadgeLabel(label: term.name));
     }
 
     return GestureDetector(
       onTap: () async {
         await AkoSearchSelection(
-            options: AkoSearchSelectionOptions(
-          options: selection.selectionOptions,
-          selectedOptions: selection.selectedTerms.map((e) => e.id).toList(),
-          onSelectionChanged: (selectedList) {
-            selection.selectedOptions.clear();
-            selection.selectedOptions.addAll(selectedList);
-            selection.selectedTerms.clear();
-            for (final id in selectedList) {
-              selection.selectedTerms.add(selection.selectionTerms[id]!);
-            }
-            // _dispatchOnInput();
-          },
-          customFieldOptions: widget.options.customFieldOptions,
-          customStyle: AkoSearchSelectionStyle(
-            submitButtonStyle: widget.options.style.submitButtonStyle,
+          options: AkoSearchSelectionOptions(
+            options: selection.selectionOptions,
+            selectedOptions:
+                selection.selectedTerms.entries.map((e) => e.key).toList(),
+            onSelectionChanged: (selectedList) {
+              selection.selectedOptions.clear();
+              selection.selectedOptions.addAll(selectedList);
+              selection.selectedTerms.clear();
+              for (final id in selectedList) {
+                if (selection.selectionTerms.containsKey(id)) {
+                  selection.selectedTerms[id] = selection.selectionTerms[id]!;
+                }
+              }
+              // _dispatchOnInput();
+            },
+            customFieldOptions: widget.options.customFieldOptions,
+            customStyle: AkoSearchSelectionStyle(
+              submitButtonStyle: widget.options.style.submitButtonStyle,
+            ),
+            bottomSheetTitle: widget.options.bottomSheetTitle,
+            submitButtonText: widget.options.submitButtonText,
+            clearButtonText: widget.options.clearButtonText,
           ),
-          bottomSheetTitle: widget.options.bottomSheetTitle,
-          submitButtonText: widget.options.submitButtonText,
-          clearButtonText: widget.options.clearButtonText,
-        )).showBottomSheet(context);
+        ).showBottomSheet(context);
         _emitSelectionChanged();
         setState(() {
           selectedLabels.clear();
-          for (final term in selection.selectedTerms) {
+          for (final term in selection.selectedTerms.values) {
             selectedLabels.add(AkoBadgeLabel(label: term.name));
           }
         });
