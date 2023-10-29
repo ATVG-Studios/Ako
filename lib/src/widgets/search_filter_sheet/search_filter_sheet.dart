@@ -105,10 +105,13 @@ class _AkoSearchFilterSheetState extends State<AkoSearchFilterSheet> {
             style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
           ),
           AkoBadge(
-              style: AkoBadgeStyle(
-                  largeSize: 26,
-                  backgroundColor: widget.options.style.badgeBackgroundColor),
-              labelsFuture: Future.value(selectedLabels)),
+            style: AkoBadgeStyle(
+              largeSize: 26,
+              backgroundColor: widget.options.style.badgeBackgroundColor
+            ),
+            labelsFuture: Future.value(selectedLabels),
+            withNoData: (context) => SizedBox.shrink(),
+          ),
           widget.options.showMoreText
         ],
       ),
