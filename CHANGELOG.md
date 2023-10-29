@@ -15,6 +15,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 * Increase AkoBadge `largeSize` default to `26`
 
+### Fixed
+* AkoBadge now shows the empty text when the label list is empty
+
 <!--
 ### Added
 ### Changed

@@ -39,6 +39,9 @@ class _AkoBadgeState extends State<AkoBadge> {
             return Text(widget.noDataLabel ?? "");
           },
       withData: (data) {
+        if (data.isEmpty) {
+          return widget.withNoData != null ? widget.withNoData!(context) : Text(widget.noDataLabel ?? "");
+        }
         final badges = data
             .map((label) => Padding(
                   padding:
