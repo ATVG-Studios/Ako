@@ -33,6 +33,8 @@ Here is a list of the components provided by Ako.
 | AkoSearchField          | Prebuild Search field (used by AkoSearchSelectionSheet)                                    | 0.6.0 |
 | AkoSearchSelectionSheet | 'TripAdvisor Search Filter'-like multi-selection bottom sheet                              | 0.6.0 |
 | AkoBadge                | A simple Badge Widget                                                                      | 0.6.0 |
+| AkoSearchFilterSheet    | 'TripAdvisor Filter'-like bottom sheet                                                     | 0.7.0 |
+| AkoImageSourceSheet     | A bottom sheet where the user selects one of two image sources                             | 0.7.0 |
 
 ### External Dependencies
 
