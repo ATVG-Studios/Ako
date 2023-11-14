@@ -19,11 +19,13 @@ class AkoFuture<T> extends StatelessWidget {
     return FutureBuilder(
         future: future,
         builder: (context, snapshot) {
-          if (snapshot.error != null)
+          if (snapshot.error != null) {
             return withError?.call(snapshot.error!, snapshot.stackTrace) ??
                 Container();
-          if (snapshot.data == null)
+          }
+          if (snapshot.data == null) {
             return withNoData?.call(context) ?? const SizedBox();
+          }
           return withData(snapshot.data!);
         });
   }

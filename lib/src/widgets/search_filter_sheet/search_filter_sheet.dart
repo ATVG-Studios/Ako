@@ -191,8 +191,6 @@ class _AkoSearchFilterSheetState extends State<AkoSearchFilterSheet> {
                   future: _buildFilterWidgets(),
                   withNoData: (context) => Text("Wird geladen..."),
                   withError: (error, stacktrace) {
-                    print(error);
-                    print(stacktrace);
                     return Text("Fehler: $error");
                   },
                   withData: (data) {

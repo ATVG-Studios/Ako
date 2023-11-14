@@ -7,7 +7,6 @@ import 'package:flutter/material.dart';
 
 import 'image_source_options.dart';
 import 'image_source_sheet.dart';
-import 'image_source_style.dart';
 
 export 'image_source_options.dart';
 export 'image_source_sheet.dart';
