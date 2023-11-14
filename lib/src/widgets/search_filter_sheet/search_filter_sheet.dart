@@ -6,6 +6,8 @@
 import 'package:ako/ako.dart';
 import 'package:flutter/material.dart';
 
+/// AkoSearchFilterSheet is a bottom-sheet widget that implements a filter menu
+/// The design and layout is inspired by TripAdvisor
 class AkoSearchFilterSheet extends StatefulWidget {
   const AkoSearchFilterSheet({super.key, required this.options});
 
@@ -104,9 +106,8 @@ class _AkoSearchFilterSheetState extends State<AkoSearchFilterSheet> {
           ),
           AkoBadge(
             style: AkoBadgeStyle(
-              largeSize: 26,
-              backgroundColor: widget.options.style.badgeBackgroundColor
-            ),
+                largeSize: 26,
+                backgroundColor: widget.options.style.badgeBackgroundColor),
             labelsFuture: Future.value(selectedLabels),
             withNoData: (context) => SizedBox.shrink(),
           ),

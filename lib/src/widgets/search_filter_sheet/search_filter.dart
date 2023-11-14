@@ -14,6 +14,7 @@ export 'search_filter_sheet.dart';
 export 'search_filter_style.dart';
 export 'search_filter_term.dart';
 
+/// AkoSearchFilter is a way to launch the [AkoSearchFilterSheet] with [AkoSearchFilterOptions]
 class AkoSearchFilter {
   AkoSearchFilterOptions options;
   AkoSearchFilter({required this.options});

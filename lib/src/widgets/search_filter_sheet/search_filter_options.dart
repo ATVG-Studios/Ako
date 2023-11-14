@@ -6,6 +6,7 @@
 import 'package:ako/ako.dart';
 import 'package:flutter/material.dart';
 
+/// AkoSearchFilterOptions is a wrapper for arguments to [AkoSearchFilterSheet]
 class AkoSearchFilterOptions {
   List<AkoSearchFilterSelection> filterSelections;
   Function()? onFilterUpdated;

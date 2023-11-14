@@ -5,6 +5,7 @@
 
 import 'search_filter_term.dart';
 
+/// AkoSearchFilterSelection defines a section in the [AkoSearchFilterSheet].
 class AkoSearchFilterSelection {
   String label;
   Map<int, String> selectionOptions;

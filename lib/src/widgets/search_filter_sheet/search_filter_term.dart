@@ -6,6 +6,7 @@
 typedef AkoSearchFilterTermLoader = Future<List<AkoSearchFilterTerm>>
     Function();
 
+/// AkoSearchFilterTerm defines a Term that can be filtered, terms are passed to [AkoSearchSelectionSheet]
 class AkoSearchFilterTerm {
   final int id;
   final String name;

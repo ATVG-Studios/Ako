@@ -13,6 +13,7 @@ export 'image_source_options.dart';
 export 'image_source_sheet.dart';
 export 'image_source_style.dart';
 
+/// AkoImageSource is a way to launch the [AkoImageSourceSheet] with [AkoImageSourceOptions]
 class AkoImageSource {
   AkoImageSourceOptions options;
   AkoImageSource({required this.options});
@@ -27,9 +28,7 @@ class AkoImageSource {
       builder: (context) {
         return StatefulBuilder(
           builder: (context, setState) {
-            return AkoImageSourceSheet(
-                options: options
-            );
+            return AkoImageSourceSheet(options: options);
           },
         );
       },

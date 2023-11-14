@@ -5,6 +5,7 @@
 
 import 'package:flutter/material.dart';
 
+/// AkoSearchFilterOptionsStyle is a wrapper for style to [AkoSearchFilterSheet]
 class AkoSearchFilterOptionsStyle {
   Color topDragIndicatorColor;
   Color? bottomSheetBackgroundColor;

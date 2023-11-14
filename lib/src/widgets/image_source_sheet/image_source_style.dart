@@ -5,6 +5,7 @@
 
 import 'package:flutter/material.dart';
 
+/// AkoImageSourceStyle is a wrapper for style to [AkoImageSourceSheet]
 class AkoImageSourceStyle {
   Color topDragIndicatorColor;
   Color? bottomSheetBackgroundColor;

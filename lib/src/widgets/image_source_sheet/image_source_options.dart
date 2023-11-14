@@ -9,6 +9,7 @@ import 'image_source_style.dart';
 
 typedef AkoImageSourceAction = void Function();
 
+/// AkoImageSourceOptions is a wrapper for arguments to [AkoImageSourceSheet]
 class AkoImageSourceOptions {
   AkoImageSourceStyle? customStyle;
   Widget galleryActionText;
@@ -22,12 +23,17 @@ class AkoImageSourceOptions {
     required this.galleryAction,
     required this.cameraAction,
     this.galleryActionText = const Text("Gallery"),
-    this.galleryActionIcon = const Icon(Icons.photo_library, size: 40,),
+    this.galleryActionIcon = const Icon(
+      Icons.photo_library,
+      size: 40,
+    ),
     this.cameraActionText = const Text("Camera"),
-    this.cameraActionIcon = const Icon(Icons.camera, size: 40,),
+    this.cameraActionIcon = const Icon(
+      Icons.camera,
+      size: 40,
+    ),
     this.customStyle,
   });
 
-  AkoImageSourceStyle get style =>
-      customStyle ?? AkoImageSourceStyle();
+  AkoImageSourceStyle get style => customStyle ?? AkoImageSourceStyle();
 }
