@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [unreleased]
 
+### Added
+* showSnackBar has a new optional parameter `displayDuration` with default of 4 seconds
+* showSnackBar has a new optional parameter `showCloseIcon` with default true
+* showErrorSnackBar has a new optional parameter `displayDuration` with default of 4 seconds
+* showErrorSnackBar has a new optional parameter `showCloseIcon` with default false
+
 <!--
 ### Added
 ### Changed

@@ -12,21 +12,32 @@ extension AkoShowSnackBar on BuildContext {
   /// showSnackBar shows a snackbar message.<br>
   /// [backgroundColor] is green by default.<br>
   /// [foregroundColor] is white by default.
-  void showSnackBar({
-    required String message,
-    Color backgroundColor = Colors.green,
-    Color foregroundColor = Colors.white,
-  }) {
+  void showSnackBar(
+      {required String message,
+      Color backgroundColor = Colors.green,
+      Color foregroundColor = Colors.white,
+      Duration displayDuration = const Duration(seconds: 4),
+      bool showCloseIcon = true}) {
     ScaffoldMessenger.of(this).showSnackBar(SnackBar(
       content: Text(message, style: TextStyle(color: foregroundColor)),
       backgroundColor: backgroundColor,
+      duration: displayDuration,
+      showCloseIcon: showCloseIcon,
+      closeIconColor: foregroundColor,
     ));
   }
 
   /// showSnackBar shows a snackbar message.<br>
   /// [backgroundColor] is red by default.<br>
   /// [foregroundColor] is white by default.
-  void showErrorSnackBar({required String message}) {
-    showSnackBar(message: message, backgroundColor: Colors.red);
+  void showErrorSnackBar(
+      {required String message,
+      Duration displayDuration = const Duration(seconds: 4),
+      bool showCloseIcon = false}) {
+    showSnackBar(
+        message: message,
+        backgroundColor: Colors.red,
+        displayDuration: displayDuration,
+        showCloseIcon: showCloseIcon);
   }
 }
