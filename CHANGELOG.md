@@ -7,12 +7,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [unreleased]
 
-### Added
-* showSnackBar has a new optional parameter `displayDuration` with default of 4 seconds
-* showSnackBar has a new optional parameter `showCloseIcon` with default true
-* showErrorSnackBar has a new optional parameter `displayDuration` with default of 4 seconds
-* showErrorSnackBar has a new optional parameter `showCloseIcon` with default false
-
 <!--
 ### Added
 ### Changed
@@ -21,6 +15,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 ### Security
 -->
+
+## [0.7.1] - 2024-04-11
+
+### Added
+* showSnackBar has a new optional parameter `displayDuration` with default of 4 seconds
+* showSnackBar has a new optional parameter `showCloseIcon` with default true
+* showErrorSnackBar has a new optional parameter `displayDuration` with default of 4 seconds
+* showErrorSnackBar has a new optional parameter `showCloseIcon` with default false
 
 ## [0.7.0] - 2023-11-14
 
@@ -117,7 +119,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - AkoResponsiveLayout, a widget to show a mobile, tablet or desktop widget based on available width
 - AkoResponsiveDevice, a enum helper to decide which width is mobile, tablet or desktop
 
-[unreleased]: https://github.com/ATVG-Studios/Ako/compare/v0.7.0...HEAD
+[unreleased]: https://github.com/ATVG-Studios/Ako/compare/v0.7.1...HEAD
+[0.7.1]: https://github.com/ATVG-Studios/Ako/compare/v0.7.0...v0.7.1
 [0.7.0]: https://github.com/ATVG-Studios/Ako/compare/v0.6.1...v0.7.0
 [0.6.1]: https://github.com/ATVG-Studios/Ako/compare/v0.6.0...v0.6.1
 [0.6.0]: https://github.com/ATVG-Studios/Ako/compare/v0.5.0...v0.6.0
