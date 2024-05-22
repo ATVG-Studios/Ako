@@ -1,94 +1,10 @@
-// Copyright 2023 the Ako authors (https://pub.dev/packages/ako).
+// Copyright 2023-2024 the Ako authors (https://pub.dev/packages/ako).
 // This Source Code Form is subject to the terms of the Mozilla Public
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 import 'package:ako/ako.dart';
 import 'package:flutter/material.dart';
-
-/// AkoSearchSelection is a way to launch the [AkoSearchSelectionSheet] with [AkoSearchSelectionOptions]
-class AkoSearchSelection {
-  AkoSearchSelectionOptions options;
-
-  AkoSearchSelection({required this.options});
-
-  Future<T?> showBottomSheet<T>(BuildContext context) {
-    return showModalBottomSheet<T>(
-      context: context,
-      isScrollControlled: true,
-      useSafeArea: true,
-      shape: options.style.bottomSheetShape,
-      backgroundColor: options.style.bottomSheetBackgroundColor,
-      builder: (context) {
-        return StatefulBuilder(
-          builder: (context, setState) {
-            return AkoSearchSelectionSheet(
-              options: options,
-            );
-          },
-        );
-      },
-    );
-  }
-}
-
-/// AkoSearchSelectionOptions is a wrapper for arguments to [AkoSearchSelectionSheet]
-class AkoSearchSelectionOptions {
-  Map<int, String> options;
-  List<int> selectedOptions;
-  Widget bottomSheetTitle;
-  Widget clearButtonText;
-  Widget submitButtonText;
-  AkoSearchSelectionStyle? customStyle;
-  AkoSearchFieldOptions? customFieldOptions;
-
-  Function(List<int>)? onSelectionChanged;
-
-  AkoSearchSelectionOptions(
-      {this.options = const {},
-      this.selectedOptions = const [],
-      this.bottomSheetTitle = const Text(
-        "Search",
-        style: TextStyle(fontSize: 24),
-      ),
-      this.clearButtonText = const Text(
-        "Clear filters",
-        style: TextStyle(decoration: TextDecoration.underline),
-      ),
-      this.submitButtonText = const Text("Apply"),
-      this.customStyle,
-      this.customFieldOptions,
-      this.onSelectionChanged});
-
-  AkoSearchSelectionStyle get style => customStyle ?? AkoSearchSelectionStyle();
-  AkoSearchFieldOptions get fieldOptions =>
-      customFieldOptions ?? AkoSearchFieldOptions();
-}
-
-/// AkoSearchSelectionStyle is a wrapper for style to [AkoSearchSelectionSheet]
-class AkoSearchSelectionStyle {
-  Color topDragIndicatorColor;
-  Color? bottomSheetBackgroundColor;
-  EdgeInsets listViewItemPadding;
-  EdgeInsets bottomButtonPadding;
-  BorderSide bottomButtonSeparator;
-  RoundedRectangleBorder bottomSheetShape;
-  ButtonStyle? clearButtonStyle;
-  ButtonStyle? submitButtonStyle;
-
-  AkoSearchSelectionStyle({
-    this.topDragIndicatorColor = Colors.grey,
-    this.bottomSheetBackgroundColor,
-    this.listViewItemPadding = const EdgeInsets.fromLTRB(13, 0, 13, 0),
-    this.bottomButtonPadding = const EdgeInsets.all(8.0),
-    this.bottomButtonSeparator = const BorderSide(color: Colors.grey, width: 1),
-    this.bottomSheetShape = const RoundedRectangleBorder(
-      borderRadius: BorderRadius.vertical(top: Radius.circular(15)),
-    ),
-    this.clearButtonStyle,
-    this.submitButtonStyle,
-  });
-}
 
 /// AkoSearchSelectionSheet is a bottom-sheet widget that implements a multi-select searchable list
 /// The design and layout is inspired by TripAdvisor
