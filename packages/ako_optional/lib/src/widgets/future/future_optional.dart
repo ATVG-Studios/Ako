@@ -1,6 +1,6 @@
+import 'package:ako_core/utils.dart';
 import 'package:flutter/material.dart';
 import 'package:optional/optional_internal.dart';
-import 'common_builder.dart';
 
 class AkoFutureOptional<T> extends StatelessWidget {
   const AkoFutureOptional(
@@ -20,16 +20,20 @@ class AkoFutureOptional<T> extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return FutureBuilder(
-        future: future,
-        builder: (context, snapshot) {
-          if (snapshot.error != null)
-            return withError?.call(snapshot.error!, snapshot.stackTrace) ??
-                Container();
-          if (snapshot.data == null)
-            return withNoData?.call(context) ?? Container();
-          if (snapshot.data?.isEmpty == true)
-            return withFutureEmpty?.call(context) ?? Container();
-          return withData(snapshot.data!.value);
-        });
+      future: future,
+      builder: (context, snapshot) {
+        if (snapshot.error != null) {
+          return withError?.call(snapshot.error!, snapshot.stackTrace) ??
+              Container();
+        }
+        if (snapshot.data == null) {
+          return withNoData?.call(context) ?? Container();
+        }
+        if (snapshot.data?.isEmpty == true) {
+          return withFutureEmpty?.call(context) ?? Container();
+        }
+        return withData(snapshot.data!.value);
+      },
+    );
   }
 }

@@ -20,7 +20,6 @@ export 'src/widgets/responsive/responsive_layout.dart';
 
 // Widgets - Future
 export 'src/widgets/future/future.dart';
-export 'src/widgets/future/future_optional.dart';
 
 // Widgets - Search
 export 'src/widgets/search/search_field.dart';

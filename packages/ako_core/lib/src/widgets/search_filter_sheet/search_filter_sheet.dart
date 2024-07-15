@@ -3,7 +3,7 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-import 'package:ako/ako.dart';
+import 'package:ako_core/ako_core.dart';
 import 'package:flutter/material.dart';
 
 /// AkoSearchFilterSheet is a bottom-sheet widget that implements a filter menu

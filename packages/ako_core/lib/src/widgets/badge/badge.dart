@@ -3,8 +3,8 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-import 'package:ako/src/widgets/future/common_builder.dart';
-import 'package:ako/widgets.dart';
+import 'package:ako_core/src/widgets/future/common_builder.dart';
+import 'package:ako_core/widgets.dart';
 import 'package:flutter/material.dart';
 
 /// AkoBadge is a widget that takes a future and displays the returned list of [AkoBadgeLabel] as badges.

@@ -1,0 +1,30 @@
+name: ako_optional
+description: Ako Optional is an Ako Core extension module for the Optional package
+version: 0.8.0-dev.3
+homepage: https://github.com/ATVG-Studios/Ako
+repository: https://github.com/ATVG-Studios/Ako
+
+environment:
+  sdk: '>=3.0.3 <4.0.0'
+  flutter: ">=1.17.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  ako_core: ^0.8.0-dev.3
+  optional: ^6.1.0+1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+flutter:
+
+platforms:
+  android:
+  ios:
+  linux:
+  macos:
+  windows:
+  web:

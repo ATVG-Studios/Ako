@@ -3,9 +3,8 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-// This file defines the public utils API of Ako.
+// This file defines the public widgets API of Ako.
 // Anything "export"ed from here, is public.
 
-// Utils
-export 'src/utils/pair.dart';
-export 'src/utils/responsive_device.dart';
+export 'package:ako_core/widgets.dart';
+export 'package:ako_optional/widgets.dart';

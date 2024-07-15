@@ -9,16 +9,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 <!--
 ### Added
-* AkoSearchSelectionField, a form field for a dropdown selection like input
-* AkoBasicScreen, a simple container with content padding
 ### Changed
-* Split AkoSearchSelection code into separate files, this does not effect the public API or imports
 ### Deprecated
 ### Removed
 ### Fixed
-* Export for `AkoFakeSearchField` was missing
 ### Security
 -->
+
+## 0.8.0 - 2024-07-xx
+
+### Changed
+* Split Ako into separate packages, making this a meta package
+* Updated ako packages to latest versions
 
 ## [0.7.1] - 2024-04-11
 
@@ -81,7 +83,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - AkoFuture, a widget to simplify usage of FutureBuilder
 - AkoFutureOptional, a widget to simplify usage of FutureBuilder with Optionals
-- The `Optional` library is added as a dependency, and exported via `package:ako/optional.dart`
+- The `Optional` library is added as a dependency, and exported via `package:ako_core/optional.dart`
 
 ### Changed
 - `child` of AkoShowWhen is now optional, an empty sized box is shown if null
@@ -89,8 +91,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [0.1.2] - 2023-06-14
 
 ### Changed
-- Create importable splits, `package:ako/extensions.dart`, `package:ako/utils.dart` and `package:ako/widgets.dart`
-- `package:ako/ako.dart` still exports all other splits for a single import.
+- Create importable splits, `package:ako_core/extensions.dart`, `package:ako_core/utils.dart` and `package:ako_core/widgets.dart`
+- `package:ako_core/ako_core.dart` still exports all other splits for a single import.
 
 ## [0.1.1] - 2023-06-13
 
