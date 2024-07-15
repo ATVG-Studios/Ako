@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 <!--
 ### Added
 * AkoSearchSelectionField, a form field for a dropdown selection like input
+* AkoBasicScreen, a simple container with content padding
 ### Changed
 * Split AkoSearchSelection code into separate files, this does not effect the public API or imports
 ### Deprecated
