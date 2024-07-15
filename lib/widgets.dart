@@ -27,3 +27,6 @@ export 'src/widgets/search/search_field.dart';
 export 'src/widgets/search_selection_sheet/search_selection.dart';
 export 'src/widgets/search_filter_sheet/search_filter.dart';
 export 'src/widgets/image_source_sheet/image_source.dart';
+
+// Widgets - Screen
+export 'src/widgets/screen/basic_screen.dart';
