@@ -4,7 +4,7 @@ Ako is a collection of generic Flutter widgets, extensions and utilities.
 
 ## Ako Packages
 
-Ako is split into multiple packages, located in `packages/`.
+Ako is split into multiple packages, located in `packages/`, see their README's for details.
 
 # License
 

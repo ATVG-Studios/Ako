@@ -8,11 +8,11 @@ Ako is split into multiple packages.
 
 Each of these packages has a different use case.
 
-| Name         | Usage                      | Dependencies       |
-|--------------|----------------------------|--------------------|
-| ako          | Single-Import Meta Package | none               |
-| ako_core     | Core Widgets and Utils     | none               |
-| ako_optional | Widgets for Optional<T>    | ako_core, optional |
+| Name         | Usage                      | Dependencies           |
+|--------------|----------------------------|------------------------|
+| ako          | Single-Import Meta Package | ako_core, ako_optional |
+| ako_core     | Core Widgets and Utils     | none                   |
+| ako_optional | Widgets for Optional<T>    | ako_core, optional     |
 
 ### Pre-Package-Split API Compatibility
 
@@ -21,14 +21,19 @@ will cause the installation of a Single-Import Meta Package.
 
 The Package at `ako` simply depends on all other packages, and exports their public API.
 
-We made sure that this does not effect existing applications.
+We made sure that this does not affect existing applications.
 
 ### Migration to Packages
 
-In the long term, we recommend moving from the `ako` meta package to the separate packages.
+While we wanted to keep Ako from having dependencies, we have found reasons why it should have dependencies.  
+Mainly so that we can create a bigger collection of reusable components.
 
-We are made the split because we wanted to make new packages that have heavier dependencies.  
-As importing everything, including what you don't need, is not a great idea.
+Now we have made this split so that we can have new packages with additional dependencies.
+
+The new `ako_core` package will stay dependency-free, only requiring Flutter.  
+The `ako` package as become a meta page, which depends on all other ako packages, and their respective dependencies.
+
+In the long term, we recommend replacing the `ako` meta package with a selection of ako packages needed.
 
 ## Ako Components
 
