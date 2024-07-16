@@ -9,18 +9,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 <!--
 ### Added
-* AkoSearchSelectionField, a form field for a dropdown selection like input
-* AkoBasicScreen, a simple container with content padding
 ### Changed
-* Split AkoSearchSelection code into separate files, this does not effect the public API or imports
 ### Deprecated
 ### Removed
 ### Fixed
-* Export for `AkoFakeSearchField` was missing
 ### Security
 -->
 
-## [0.8.0] - 2024-07-xx
+## [0.8.0] - 2024-07-16
 
 ### Added
 * AkoSearchSelectionField, a form field for a dropdown selection like input
@@ -30,6 +26,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * **BREAKING** AkoFutureOptional into `ako_optional` package
 ### Fixed
 * Export for `AkoFakeSearchField` was missing
+
+Going forward, this CHANGELOG only contains changes of the Ako Core package.
 
 ## [0.7.1] - 2024-04-11
 
@@ -134,7 +132,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - AkoResponsiveLayout, a widget to show a mobile, tablet or desktop widget based on available width
 - AkoResponsiveDevice, a enum helper to decide which width is mobile, tablet or desktop
 
-[unreleased]: https://github.com/ATVG-Studios/Ako/compare/v0.7.1...HEAD
+[unreleased]: https://github.com/ATVG-Studios/Ako/compare/v0.8.0...HEAD
+[0.8.0]: https://github.com/ATVG-Studios/Ako/compare/v0.7.1...v0.8.0
 [0.7.1]: https://github.com/ATVG-Studios/Ako/compare/v0.7.0...v0.7.1
 [0.7.0]: https://github.com/ATVG-Studios/Ako/compare/v0.6.1...v0.7.0
 [0.6.1]: https://github.com/ATVG-Studios/Ako/compare/v0.6.0...v0.6.1

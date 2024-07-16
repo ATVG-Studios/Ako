@@ -16,10 +16,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Security
 -->
 
-## [0.8.0] - 2024-07-xx
+## [0.8.0] - 2024-07-16
 
 ### Changed
 * **BREAKING** Extracted AkoFutureOptional into `ako_optional` package
+
+Going forward, this CHANGELOG only contains changes of the Ako Optional package.
 
 ## [0.5.0] - 2023-08-17
 
@@ -42,7 +44,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - AkoFutureOptional, a widget to simplify usage of FutureBuilder with Optionals
 - The `Optional` library is added as a dependency, and exported via `package:ako_core/optional.dart`
 
-[unreleased]: https://github.com/ATVG-Studios/Ako/compare/v0.7.1...HEAD
+[unreleased]: https://github.com/ATVG-Studios/Ako/compare/v0.8.0...HEAD
+[0.8.0]: https://github.com/ATVG-Studios/Ako/compare/v0.7.1...v0.8.0
 [0.5.0]: https://github.com/ATVG-Studios/Ako/compare/v0.4.0...v0.5.0
 [0.4.0]: https://github.com/ATVG-Studios/Ako/compare/v0.3.0...v0.4.0
 [0.3.0]: https://github.com/ATVG-Studios/Ako/compare/v0.2.0...v0.3.0

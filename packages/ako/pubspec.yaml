@@ -1,6 +1,6 @@
 name: ako
 description: Ako is a collection of Flutter widgets, extensions and utilities.
-version: 0.8.0-dev.3
+version: 0.8.0
 homepage: https://github.com/ATVG-Studios/Ako
 repository: https://github.com/ATVG-Studios/Ako
 
@@ -11,8 +11,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  ako_core: ^0.8.0-dev.3
-  ako_optional: ^0.8.0-dev.3
+  ako_core: ^0.8.0
+  ako_optional: ^0.8.0
 
 dev_dependencies:
   flutter_test:
