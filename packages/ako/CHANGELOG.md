@@ -16,6 +16,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Security
 -->
 
+## [0.9.0] - 2024-07-22
+
+### Added
+* New dependency: `ako_map: ^0.1.0`
+
 ## [0.8.0] - 2024-07-16
 
 ### Changed
