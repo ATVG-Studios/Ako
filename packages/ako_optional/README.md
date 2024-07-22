@@ -15,9 +15,9 @@ Here is a list of the components provided by Ako.
 
 ### External Dependencies
 
-| Name     | Description                                                                       | Since |
-|----------|-----------------------------------------------------------------------------------|-------|
-| Optional | Ako depends on `optional` and exports it via `package:ako_optional/optional.dart` | 0.2.0 |
+| Name     | Description                                                                       | Since | Version  |
+|----------|-----------------------------------------------------------------------------------|-------|----------|
+| Optional | Ako depends on `optional` and exports it via `package:ako_optional/optional.dart` | 0.2.0 | ^6.1.0+1 |
 
 # License
 
