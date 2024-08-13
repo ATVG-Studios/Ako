@@ -1,6 +1,6 @@
 name: ako_map
 description: Ako Map is an Ako Core extension module for the OpenStreetMap package
-version: 0.1.1
+version: 0.1.2
 homepage: https://github.com/ATVG-Studios/Ako
 repository: https://github.com/ATVG-Studios/Ako
 
@@ -11,7 +11,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  ako_core: ^0.8.0
+  ako_core: ^0.9.0
   flutter_osm_plugin: ^1.2.0
 
 dev_dependencies:
