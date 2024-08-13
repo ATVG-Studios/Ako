@@ -9,5 +9,6 @@
 // Utils
 export 'src/utils/pair.dart';
 export 'src/utils/responsive_device.dart';
+export 'src/utils/platform.dart';
 
 export 'src/widgets/future/common_builder.dart';
