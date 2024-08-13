@@ -11,3 +11,4 @@ library ako_optional;
 // Anything "export"ed from here, is public.
 
 export 'widgets.dart';
+export 'utils.dart';
