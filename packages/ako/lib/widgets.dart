@@ -8,3 +8,4 @@
 
 export 'package:ako_core/widgets.dart';
 export 'package:ako_optional/widgets.dart';
+export 'package:ako_map/widgets.dart';

@@ -36,6 +36,17 @@ The `ako` package as become a meta page, which depends on all other ako packages
 
 In the long term, we recommend replacing the `ako` meta package with a selection of ako packages needed.
 
+### Migration Steps
+
+* Replace all `package:ako/ako.dart` with `package:ako_core/ako_core.dart`;
+* Replace all `package:ako/widgets.dart` with `package:ako_core/ako_core.dart` or `package:ako_core/widgets.dart`;
+* Replace all `package:ako/extensions.dart` with `package:ako_core/ako_core.dart` or `package:ako_core/extensions.dart`;
+* Replace all `package:ako/optional.dart` with `package:ako_optional/optional.dart`;
+
+Add import for `package:ako_optional/ako_optional.dart` where needed.
+
+We also recommend running an Imports-Optimizer like the one build-into IntelliJ (`Ctrl+Alt+O`).
+
 ## Ako Components
 
 Please see the components table of the other Ako packages for detail.
