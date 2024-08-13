@@ -16,6 +16,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Security
 -->
 
+## 0.1.1 - 2024-08-13
+
+### Changed
+* Updated `flutter_osm_plugin` to `1.2.0`
+
 ## 0.1.0 - 2024-07-22
 
 ### Added
