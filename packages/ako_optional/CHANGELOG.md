@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 * `tryOptionalOrElse` helper to resolve a optional future, catching exceptions
 * `tryOrElse` helper to resolve a future, catching exceptions
+* `fetchJsonAsOptional` helper to fetch and parse JSON data
 ### Changed
 ### Deprecated
 ### Removed

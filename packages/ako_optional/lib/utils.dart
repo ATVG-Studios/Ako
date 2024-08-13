@@ -5,3 +5,4 @@
 
 // Utils - Future
 export 'src/utils/try_future.dart';
+export 'src/utils/fetch.dart';
