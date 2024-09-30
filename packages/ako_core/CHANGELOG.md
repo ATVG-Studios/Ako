@@ -16,6 +16,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Security
 -->
 
+## [0.9.1] - 2024-09-30
+
+### Fixed
+* `AkoSearchSelectionSheet` now applies the filter on all possible options, instead of the last filter result
+
 ## [0.9.0] - 2024-08-13
 
 * `AkoPlatform` for getting information about the device platform
