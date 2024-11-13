@@ -16,6 +16,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Security
 -->
 
+## [0.9.3] - 2024-11-13
+
+## Changed
+* Updated `ako_core` to `0.9.2`
+* Updated `ako_map` to `0.1.3`
+
 ## [0.9.2] - 2024-08-13
 
 ### Changed
@@ -147,7 +153,8 @@ Going forward, this CHANGELOG only contains changes of the Ako meta package.
 - AkoResponsiveLayout, a widget to show a mobile, tablet or desktop widget based on available width
 - AkoResponsiveDevice, a enum helper to decide which width is mobile, tablet or desktop
 
-[unreleased]: https://github.com/ATVG-Studios/Ako/compare/v0.9.2...HEAD
+[unreleased]: https://github.com/ATVG-Studios/Ako/compare/v0.9.3...HEAD
+[0.9.3]: https://github.com/ATVG-Studios/Ako/compare/v0.9.2...v0.9.3
 [0.9.2]: https://github.com/ATVG-Studios/Ako/compare/v0.9.1...v0.9.2
 [0.9.1]: https://github.com/ATVG-Studios/Ako/compare/v0.9.0...v0.9.1
 [0.9.0]: https://github.com/ATVG-Studios/Ako/compare/v0.8.0...v0.9.0
