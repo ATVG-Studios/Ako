@@ -8,12 +8,12 @@ Ako is split into multiple packages.
 
 Each of these packages has a different use case.
 
-| Name         | Usage                      | Dependencies                    |
-|--------------|----------------------------|---------------------------------|
-| ako          | Single-Import Meta Package | ako_core, ako_map, ako_optional |
-| ako_core     | Core Widgets and Utils     | none                            |
-| ako_optional | Widgets for Optional<T>    | ako_core, optional              |
-| ako_map      | Widgets for Flutter OSM    | ako_core, flutter_osm_plugin    |
+| Name                                                  | Usage                      | Dependencies                    |
+|-------------------------------------------------------|----------------------------|---------------------------------|
+| [ako](https://pub.dev/packages/ako)                   | Single-Import Meta Package | ako_core, ako_map, ako_optional |
+| [ako_core](https://pub.dev/packages/ako_core)         | Core Widgets and Utils     | none                            |
+| [ako_optional](https://pub.dev/packages/ako_optional) | Widgets for Optional<T>    | ako_core, optional              |
+| [ako_map](https://pub.dev/packages/ako_map)           | Widgets for Flutter OSM    | ako_core, flutter_osm_plugin    |
 
 ### Pre-Package-Split API Compatibility
 
