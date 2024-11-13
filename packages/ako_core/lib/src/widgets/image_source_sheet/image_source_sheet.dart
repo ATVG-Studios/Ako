@@ -20,13 +20,9 @@ class AkoImageSourceSheet extends StatefulWidget {
 class _AkoImageSourceSheetState extends State<AkoImageSourceSheet> {
   @override
   Widget build(BuildContext context) {
-    return DraggableScrollableSheet(
-      initialChildSize: 0.15,
-      minChildSize: 0.15,
-      maxChildSize: 0.15,
-      expand: false,
-      builder: (context, scrollController) {
-        return Column(
+    return Wrap(
+      children: [
+        Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -81,8 +77,8 @@ class _AkoImageSourceSheetState extends State<AkoImageSourceSheet> {
               ),
             ),
           ],
-        );
-      },
+        ),
+      ],
     );
   }
 }
