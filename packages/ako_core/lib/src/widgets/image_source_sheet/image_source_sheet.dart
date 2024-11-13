@@ -33,9 +33,10 @@ class _AkoImageSourceSheetState extends State<AkoImageSourceSheet> {
             const SizedBox(height: 10),
             Center(
               child: Container(
-                  width: MediaQuery.of(context).size.width / 5,
-                  height: 3,
-                  color: widget.options.style.topDragIndicatorColor),
+                width: MediaQuery.of(context).size.width / 5,
+                height: 3,
+                color: widget.options.style.topDragIndicatorColor,
+              ),
             ),
             Padding(
               padding: widget.options.style.bottomButtonPadding,
@@ -43,35 +44,39 @@ class _AkoImageSourceSheetState extends State<AkoImageSourceSheet> {
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   TextButton(
-                      onPressed: () {
-                        widget.options.galleryAction();
-                        Navigator.of(context).pop();
-                      },
-                      style: ButtonStyle(
-                          foregroundColor: MaterialStateColor.resolveWith(
-                              (states) =>
-                                  widget.options.style.buttonForegroundColor)),
-                      child: Column(
-                        children: [
-                          widget.options.galleryActionIcon,
-                          widget.options.galleryActionText
-                        ],
-                      )),
+                    onPressed: () {
+                      widget.options.galleryAction();
+                      Navigator.of(context).pop();
+                    },
+                    style: ButtonStyle(
+                      foregroundColor: WidgetStateColor.resolveWith(
+                        (states) => widget.options.style.buttonForegroundColor,
+                      ),
+                    ),
+                    child: Column(
+                      children: [
+                        widget.options.galleryActionIcon,
+                        widget.options.galleryActionText
+                      ],
+                    ),
+                  ),
                   TextButton(
-                      onPressed: () {
-                        widget.options.cameraAction();
-                        Navigator.of(context).pop();
-                      },
-                      style: ButtonStyle(
-                          foregroundColor: MaterialStateColor.resolveWith(
-                              (states) =>
-                                  widget.options.style.buttonForegroundColor)),
-                      child: Column(
-                        children: [
-                          widget.options.cameraActionIcon,
-                          widget.options.cameraActionText
-                        ],
-                      )),
+                    onPressed: () {
+                      widget.options.cameraAction();
+                      Navigator.of(context).pop();
+                    },
+                    style: ButtonStyle(
+                      foregroundColor: WidgetStateColor.resolveWith(
+                        (states) => widget.options.style.buttonForegroundColor,
+                      ),
+                    ),
+                    child: Column(
+                      children: [
+                        widget.options.cameraActionIcon,
+                        widget.options.cameraActionText
+                      ],
+                    ),
+                  ),
                 ],
               ),
             ),
