@@ -53,5 +53,5 @@ Please see the components table of the other Ako packages for detail.
 
 # License
 
-Copyright 2023-2024 the Ako authors (https://pub.dev/packages/ako).  
+Copyright 2023-2025 the Ako authors (https://pub.dev/packages/ako).  
 Ako is free software licensed under the Mozilla Public License, version 2.0.
